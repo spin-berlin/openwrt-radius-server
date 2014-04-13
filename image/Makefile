@@ -34,5 +34,10 @@ Openwrt-ImageBuilder-ar71xx_generic-for-linux-x86_64: OpenWrt-ImageBuilder-ar71x
 OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2:
 	cd dl && wget -c http://downloads.openwrt.org/snapshots/trunk/ar71xx/OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2
 
+random:
+	dd if=/dev/urandom of=$(CURDIR)/files/etc/freeradius2/certs/random count=2
+dh:
+	openssl dhparam -out $(CURDIR)/files/etc/freeradius2/certs/dh 1024
+
 clean:
 	rm images/*
