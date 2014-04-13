@@ -16,7 +16,8 @@ PACKAGES="-wpad-mini wpad \
   freeradius2-mod-files \
   freeradius2-mod-mschap \
   freeradius2-mod-pap \
-  freeradius2-mod-radutmp"
+  freeradius2-mod-radutmp \
+	kmod-batman-adv"
 
 images: ${IMAGE_BUILDER} ${PROFILES}
 	@echo "Images created for all profiles."
