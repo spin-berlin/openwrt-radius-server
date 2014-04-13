@@ -1,0 +1,69 @@
+config wifi-device  radio0
+	option type     mac80211
+	option channel  11
+	option hwmode	11ng
+	option path	'platform/ar934x_wmac'
+	list ht_capab	LDPC
+	list ht_capab	SHORT-GI-20
+	list ht_capab	SHORT-GI-40
+	list ht_capab	TX-STBC
+	list ht_capab	RX-STBC1
+	list ht_capab	DSSS_CCK-40
+	option htmode	HT20
+
+config wifi-iface
+	option device   radio0
+	option network  lan
+	option mode     ap
+	option ssid     'spin-login'
+	option encryption 'wpa2'
+	option auth_server '192.168.42.1'
+	option auth_secret 'testing123'
+	option acct_server '192.168.42.1'
+	option acct_secret 'testing123'
+	option nasid 'my-ap'
+
+config wifi-iface
+  option device radio0
+  option mode adhoc
+  option network adhoc2
+  option ifname adhoc2
+  option ssid 'spin-mesh'
+  option bssid '02:CA:FE:CA:CA:40'
+  #option encryption 'psk2'
+  #option key 'foo'
+
+config wifi-device  radio1
+	option type     mac80211
+	option channel  36
+	option hwmode	11na
+	option path	'pci0000:00/0000:00:00.0'
+	list ht_capab	LDPC
+	list ht_capab	SHORT-GI-20
+	list ht_capab	SHORT-GI-40
+	list ht_capab	TX-STBC
+	list ht_capab	RX-STBC1
+	list ht_capab	DSSS_CCK-40
+	option htmode	HT20
+
+config wifi-iface
+  option device radio1
+  option mode adhoc
+  option network adhoc5
+  option ifname adhoc5
+  option ssid 'spin-mesh'
+  option bssid '02:CA:FE:CA:CA:40'
+  #option encryption 'psk2'
+  #option key 'foo'
+
+config wifi-iface
+	option device   radio1
+	option network  lan
+	option mode     ap
+	option ssid     'spin-login5ghz'
+	option encryption 'wpa2'
+	option auth_server '192.168.42.1'
+	option auth_secret 'testing123'
+	option acct_server '192.168.42.1'
+	option acct_secret 'testing123'
+	option nasid 'my-ap'
