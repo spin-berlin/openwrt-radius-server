@@ -47,3 +47,12 @@ Upload the ca.pem and server.pem to the router.
 For now we use GTC authentication method so we can store passwords as salted
 sha1. Uncomment the `gtc` section and `auth_type = PAP` in
 `/etc/freeradius2/eap.conf`.
+
+## Generate account entry
+
+There is a script to generate user passwords and hashs:
+
+    ./scripts/ssha.py thisisausername
+
+Paste the generate account to '/etc/freeradius2/users'. Send the password to the
+user through a secure channel.
