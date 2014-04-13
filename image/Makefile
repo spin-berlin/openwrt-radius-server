@@ -25,7 +25,7 @@ images: ${IMAGE_BUILDER} ${PROFILES}
 ${PROFILES}: %:
 	$(MAKE) -C $(IMAGE_BUILDER) image PROFILE=$* \
 		PACKAGES=$(PACKAGES) \
-		FILES="" \
+		FILES="$(CURDIR)/files" \
 		BIN_DIR="$(CURDIR)/images" ; \
 
 Openwrt-ImageBuilder-ar71xx_generic-for-linux-x86_64: OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2
