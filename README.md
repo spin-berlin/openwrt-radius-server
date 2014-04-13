@@ -55,4 +55,6 @@ There is a script to generate user passwords and hashs:
     ./scripts/ssha.py thisisausername
 
 Paste the generate account to '/etc/freeradius2/users'. Send the password to the
-user through a secure channel.
+user through a secure channel. Restart the freeradius server:
+
+    /etc/init.d/radiusd restart
