@@ -58,3 +58,9 @@ Paste the generate account to '/etc/freeradius2/users'. Send the password to the
 user through a secure channel. Restart the freeradius server:
 
     /etc/init.d/radiusd restart
+
+## Expiration of accounts
+
+Use the expiration attribute:
+
+    Expiration := "1 Apr 2342"
