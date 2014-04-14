@@ -28,7 +28,7 @@ ${PROFILES}: %:
 		FILES="$(CURDIR)/files" \
 		BIN_DIR="$(CURDIR)/images" ; \
 
-Openwrt-ImageBuilder-ar71xx_generic-for-linux-x86_64: OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2
+OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64: OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2
 	tar -xvf dl/OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2
 
 OpenWrt-ImageBuilder-ar71xx_generic-for-linux-x86_64.tar.bz2:
